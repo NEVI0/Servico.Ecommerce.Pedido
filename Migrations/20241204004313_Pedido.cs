@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -15,7 +16,11 @@ namespace Ecommerce.Pedido.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Produtos = table.Column<string>(type: "TEXT", nullable: false),
+                    Data = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    MetodoPagamento = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
