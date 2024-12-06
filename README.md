@@ -37,3 +37,40 @@ O sistema possui dois tipos principais de usuários:
 ### 3. **Atualização de Quantidade de Produtos**
    - O administrador pode atualizar a quantidade de um produto em um pedido.
    - O cliente também pode atualizar a quantidade de produtos em seus pedidos, caso o pedido ainda não tenha sido processado.
+
+### 4. *Gerenciamento de Produtos*
+   - O administrador pode cadastrar novos produtos no sistema.
+   - O administrador pode visualizar, editar ou excluir produtos existentes no sistema.
+   - O administrador deve gerenciar o estoque de produtos, garantindo que a quantidade em estoque seja sempre precisa.
+
+### 5. *Gestão de Clientes*
+   - O sistema deve permitir que o administrador consulte informações sobre os clientes, como *nome, **email, **CPF*, etc.
+   - O administrador deve poder adicionar novos clientes ou editar informações existentes.
+
+### 6. *Autenticação e Autorização*
+   - O sistema deve garantir que apenas os administradores tenham acesso às funcionalidades de gerenciamento de pedidos, produtos e clientes.
+   - O cliente deve acessar apenas suas próprias informações de pedido e não ter acesso a dados de outros usuários.
+
+### 7. *Relatórios e Estatísticas*
+   - O sistema deve permitir a geração de relatórios de vendas e a quantidade de produtos vendidos, ajudando na análise do desempenho do e-commerce.
+   - O administrador deve poder filtrar relatórios por *período* e *produto*.
+
+### 8. *Persistência de Dados*
+   - O sistema deve persistir os dados em um banco de dados relacional.
+   - As informações de pedidos, produtos e clientes devem ser armazenadas e consultadas de maneira eficiente, com suporte para consultas complexas.
+
+# Microsserviço de Gerenciamento de Pedidos
+
+## Função do Microsserviço
+
+O *Microsserviço de Gerenciamento de Pedidos* é responsável pela gestão de pedidos dentro de um sistema de e-commerce. Este microsserviço permite que clientes façam pedidos de produtos, realizem alterações na quantidade dos produtos e escolham métodos de pagamento. Ele também fornece funcionalidades para os administradores do sistema, como a visualização e o gerenciamento de pedidos, produtos e clientes.
+
+### Principais Funcionalidades
+
+- *Criação de Pedidos*: Permite que os clientes façam pedidos com base nos produtos disponíveis no catálogo.
+- *Consulta de Pedidos*: Os clientes podem consultar os detalhes de seus pedidos passados, e os administradores podem visualizar todos os pedidos realizados.
+- *Atualização de Quantidade de Produtos*: O administrador pode atualizar a quantidade de um produto em um pedido existente, assim como os clientes podem ajustar seus pedidos antes de serem finalizados.
+- *Gerenciamento de Produtos*: O administrador pode adicionar, editar ou excluir produtos, além de atualizar os detalhes relacionados ao estoque de cada produto.
+- *Gestão de Clientes*: Permite a consulta e o gerenciamento de informações de clientes, como dados de contato e histórico de pedidos.
+
+Este microsserviço é projetado para ser *escável, **modular* e *fácil de integrar* com outros serviços dentro de um ecossistema de e-commerce, garantindo que as operações de pedidos sejam realizadas de forma eficiente e segura.
